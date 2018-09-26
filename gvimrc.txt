@@ -1,0 +1,22 @@
+set nu
+set cursorline
+set tabstop=4
+set shiftwidth=4
+set guifont=Monaco:h19
+set ruler
+set smartindent
+set autoindent
+filetype indent on
+set termguicolors
+set t_Co=256
+syntax on
+map <F9><Esc>:w<CR>:!g++ % -o % <<CR>:!./%<<CR>
+inoremap ( ()<Esc>i
+inoremap " ""<Esc>i
+inoremap ' ''<Esc>i
+inoremap [ []<ESC>i
+inoremap {<CR> {<CR>}<Esc>ko
+colorscheme monokai
+autocmd BufNewFile *.cpp 0r ~/.vim/template/cpp.tpl | autocmd! BufNewFile
+
+
